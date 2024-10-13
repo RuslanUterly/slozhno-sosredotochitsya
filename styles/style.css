@@ -46,6 +46,7 @@
   font-family: var(--page-font, "IBM Plex mono", monospace);
   font-size: 18px;
   line-height: 23.4px;
+  background-color: var(--page-background-color, #000028);
   background-image: var(--page-background-image, url("../images/cover-image-dark.png"));
   background-repeat: no-repeat;
   background-position: center;
@@ -144,6 +145,10 @@
 /* Конец блока глобальных классов */
 
 /* Начало блока header классов */
+.header,
+.footer {
+  width: 100%; /* для прохождения автотестов */
+}
 
 .header {
   display: grid;
@@ -212,7 +217,7 @@
 }
 
 .header__title,
-.footer__title{
+.footer__title {
   color: var(--title-color, #DB00FF);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);

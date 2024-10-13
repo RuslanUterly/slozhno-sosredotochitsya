@@ -15,6 +15,7 @@
   --corners-color: #353430;
   --menu-color: #353430;
   --page-background-image: url(../images/cover-image-light.png);
+  --page-background-color: #fff1f7;
 
   --rec-decor-visibility: hidden;
 }
@@ -31,6 +32,7 @@
   --corners-color: #353430;
   --menu-color: #353430;
   --page-background-image: url(../images/cover-image-light.png);
+  --page-background-color: #fff1f7;
 
   --rec-decor-visibility: hidden;
   }

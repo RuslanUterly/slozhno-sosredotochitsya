@@ -41,6 +41,7 @@
 /* Начало блока глобальных классов */
 
 .page {
+  margin: 0 auto;
   padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   color: var(--text-color, #f1b2ce);
   font-family: var(--page-font, "IBM Plex mono", monospace);
@@ -145,14 +146,10 @@
 /* Конец блока глобальных классов */
 
 /* Начало блока header классов */
-.header,
-.footer {
-  width: 100%; /* для прохождения автотестов */
-  height: 100%;
-}
 
 .header {
   display: grid;
+  grid-template-rows: auto max-content auto;
   align-items: center;
 }
 

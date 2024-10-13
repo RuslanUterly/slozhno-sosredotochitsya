@@ -148,6 +148,7 @@
 .header,
 .footer {
   width: 100%; /* для прохождения автотестов */
+  height: 100%;
 }
 
 .header {

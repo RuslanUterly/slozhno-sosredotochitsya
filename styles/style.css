@@ -164,10 +164,10 @@
 
 @media (width >= 1024px) {
   .header__theme-menu {
+    justify-self: center;
     align-self: self-start;
     margin: 0;
     margin-block-end: 190px;
-    justify-self: center;
   }
 }
 
@@ -232,8 +232,8 @@
 }
 
 .header__subtitle {
-  margin-block: 55px;
   justify-self: end;
+  margin-block: 55px;
   inline-size: clamp(355px, calc(2.29vw + 346.41px), 364px);
 }
 

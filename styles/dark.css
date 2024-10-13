@@ -5,8 +5,34 @@
 */
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --text-color: #f1b2ce;
+  --title-color: #db00ff;
+  --subtitle-color: #ff0070;
+  --subtitle-color-tr40: #ff007040;
+  --article-title-color: #000028;
+  --accent-color: #ff0070;
+
+  --corners-color: #ff0070;
+  --menu-color: #ff0070;
+  --page-background-image: url(../images/cover-image-dark.png);
+
+  --rec-decor-visibility: visible;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #f1b2ce;
+    --title-color: #db00ff;
+    --subtitle-color: #ff0070;
+    --subtitle-color-tr40: #ff007040;
+    --article-title-color: #000028;
+    --accent-color: #ff0070;
+
+    --corners-color: #ff0070;
+    --menu-color: #ff0070;
+    --page-font: "IBM Plex mono", monospace;
+    --page-background-image: url(../images/cover-image-dark.png);
+
+    --rec-decor-visibility: visible;
+  }
 }

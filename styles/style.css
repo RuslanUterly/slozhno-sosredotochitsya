@@ -41,8 +41,6 @@
 /* Начало блока глобальных классов */
 
 .page {
-  margin: 0 auto;
-  padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   color: var(--text-color, #f1b2ce);
   font-family: var(--page-font, "IBM Plex mono", monospace);
   font-size: 18px;
@@ -53,12 +51,6 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-}
-
-@media (width >= 768px) {
-  .page {
-    padding: 20px;
-  }
 }
 
 .decorated-zone {
@@ -134,9 +126,9 @@
 /* Конец блока глобальных классов */
 
 /* Начало блока header классов */
-.header,
-.footer {
-  min-block-size: 100vh;
+.cover {
+  padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  min-height: 100dvh;
 }
 
 .header {
@@ -145,22 +137,19 @@
 }
 
 @media (width <= 375px) {
-  .header,
-  .footer {
+  .cover {
     min-block-size: 97vh;
   }
 }
 
 @media (width >= 768px) {
-  .header,
-  .footer {
+  .cover {
     min-block-size: 96vh;
   }
 }
 
 @media (width >= 1024px) {
-  .header,
-  .footer {
+  .cover {
     min-block-size: 94.7vh;
   }
 }
@@ -273,13 +262,13 @@
 .main {
   display: grid;
   gap: 50px;
-  padding: 50px 0px;
+  padding: 40px 10px;
 }
 
 @media (width >= 768px) {
   .main {
     gap: 80px;
-    padding: 80px 0px;
+    padding: 80px 20px;
   }
 }
 

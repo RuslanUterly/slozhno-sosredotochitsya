@@ -63,13 +63,13 @@
 
 .decorated-zone {
   position: relative;
-  min-block-size: 97vh;
 }
 
 .decorated-zone::before,
 .decorated-zone::after {
   content: "";
   position: absolute;
+  z-index: -1;
   inline-size: 25px;
   block-size: 25px;
 }
@@ -85,19 +85,7 @@
   border-inline-start: 1px solid var(--corners-color, #ff0070);
   border-block-end: 1px solid var(--corners-color, #ff0070);
   inset-inline-start: 0px;
-  inset-block-end: 0;
-}
-
-@media (width >= 768px) {
-  .decorated-zone {
-    min-block-size: 96vh;
-  }
-}
-
-@media (width >= 1024px) {
-  .decorated-zone {
-    min-block-size: 94.7vh;
-  }
+  inset-block-end: 0px;
 }
 
 .link {
@@ -146,11 +134,35 @@
 /* Конец блока глобальных классов */
 
 /* Начало блока header классов */
+.header,
+.footer {
+  min-block-size: 100vh;
+}
 
 .header {
   display: grid;
-  grid-template-rows: auto max-content auto;
   align-items: center;
+}
+
+@media (width <= 375px) {
+  .header,
+  .footer {
+    min-block-size: 97vh;
+  }
+}
+
+@media (width >= 768px) {
+  .header,
+  .footer {
+    min-block-size: 96vh;
+  }
+}
+
+@media (width >= 1024px) {
+  .header,
+  .footer {
+    min-block-size: 94.7vh;
+  }
 }
 
 .header__theme-menu {

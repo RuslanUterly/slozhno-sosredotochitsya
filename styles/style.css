@@ -69,15 +69,15 @@
 .decorated-zone::before {
   border-inline-end: 1px solid var(--corners-color, #ff0070);
   border-block-start: 1px solid var(--corners-color, #ff0070);
-  inset-inline-end: 0px;
-  inset-block-start: 0px;
+  inset-inline-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  inset-block-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
 
 .decorated-zone::after {
   border-inline-start: 1px solid var(--corners-color, #ff0070);
   border-block-end: 1px solid var(--corners-color, #ff0070);
-  inset-inline-start: 0px;
-  inset-block-end: 0px;
+  inset-inline-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  inset-block-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
 
 .link {
@@ -103,10 +103,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 2px 10px 0 0;
   color: var(--accent-color, #FF0070);
-  inset-inline-end: 0px;
-  inset-block-start: 0px;
+  inset-inline-end: clamp(20px, 12.36px + 2.037vw, 28px);
+  inset-block-start: clamp(10px, 0.475px + 2.54vw, 20px);
 }
 
 .rec-icon::before {
@@ -126,32 +125,15 @@
 /* Конец блока глобальных классов */
 
 /* Начало блока header классов */
+
 .cover {
+  display: grid;
   padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
-  min-height: 100dvh;
+  min-block-size: 100vh;
 }
 
 .header {
-  display: grid;
-  align-items: center;
-}
-
-@media (width <= 375px) {
-  .cover {
-    min-block-size: 97vh;
-  }
-}
-
-@media (width >= 768px) {
-  .cover {
-    min-block-size: 96vh;
-  }
-}
-
-@media (width >= 1024px) {
-  .cover {
-    min-block-size: 94.7vh;
-  }
+  align-items: start;
 }
 
 .header__theme-menu {
@@ -161,7 +143,7 @@
 
 @media (width >= 768px) {
   .header__theme-menu {
-    margin-block-start: 120px;
+    margin-block-start: 170px;
     margin-block-end: 70px;
   }
 }
@@ -169,9 +151,8 @@
 @media (width >= 1024px) {
   .header__theme-menu {
     justify-self: center;
-    align-self: self-start;
-    margin: 0;
-    margin-block-end: 190px;
+    margin-block-start: 0;
+    margin-block-end: 215px;
   }
 }
 
@@ -243,15 +224,7 @@
 
 @media (width >= 768px) {
   .header__subtitle {
-    margin-block-end: 108px;
     inline-size: clamp(364px, calc(50% - 1px), 491px);
-  }
-}
-
-@media (width >= 1024px) {
-  .header__subtitle {
-    margin-block-start: 60px;
-    margin-block-end: 85px;
   }
 }
 
@@ -268,7 +241,7 @@
 @media (width >= 768px) {
   .main {
     gap: 80px;
-    padding: 80px 20px;
+    padding: 60px 20px;
   }
 }
 
@@ -354,7 +327,6 @@
   .section-gallery__list-item:nth-child(3) {
     grid-row-start: span 2;
   }
-
 }
 
 .section-gallery__list-img {
@@ -370,7 +342,7 @@
 /* Начало блока footer классов */
 
 .footer {
-  display: grid;
+  place-items: center;
 }
 
 /* Конец блока footer классов */

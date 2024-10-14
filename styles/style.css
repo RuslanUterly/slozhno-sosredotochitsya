@@ -8,25 +8,15 @@
   text-shadow: 4px 4px 0px var(--accent-color, #ff0070);
 }
 
-.subtitle-decor,
-.text-decor {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: inherit;
-}
-
-.text-decor-regular {
+.font-regular {
   font-weight: 400;
-  font-size: 18px;
-  line-height: inherit;
 }
 
 .subtitle-decor {
   color: var(--subtitle-color, #FF0070);
 }
 
-.text-decor,
-.text-decor-regular {
+.text-decor {
   color: var(--article-title-color, #000028);
   background-color: var(--accent-color, #FF0070);
 }
@@ -44,7 +34,7 @@
   color: var(--text-color, #f1b2ce);
   font-family: var(--page-font, "IBM Plex mono", monospace);
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 1.3;
   background-color: var(--page-background-color, #000028);
   background-image: var(--page-background-image, url("../images/cover-image-dark.png"));
   background-repeat: no-repeat;
@@ -80,12 +70,13 @@
   inset-block-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
 
+/*тень исправил в index.html*/
 .link {
   text-decoration: none;
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 .link:focus {
@@ -129,7 +120,8 @@
 .cover {
   display: grid;
   padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .header {
@@ -185,7 +177,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border-color: var(--subtitle-color-tr40, #ff007040);
+  border-color: var(--subtitle-color-hover, #ff007040);
 }
 
 .header__theme-menu-button:focus {
@@ -196,8 +188,7 @@
   border-bottom: 1px solid currentColor;
 }
 
-.header__title,
-.footer__title {
+.page-title {
   color: var(--title-color, #DB00FF);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -205,13 +196,12 @@
   text-align: left;
 }
 
-.header__title {
+.title-offset {
   margin-inline-start: clamp(-20px, calc(-5.08vw + 19.05px), 0px);
 }
 
 @media (width >= 768px) {
-  .header__title,
-  .footer__title {
+  .page-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
@@ -219,6 +209,9 @@
 .header__subtitle {
   justify-self: end;
   margin-block: 55px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: inherit;
   inline-size: clamp(355px, calc(2.29vw + 346.41px), 364px);
 }
 
@@ -286,8 +279,8 @@
 }
 
 .section__title {
-  display: grid;
-  gap: 10px;
+  font-size: 18px;
+  line-height: inherit;
 }
 
 .section__title-how {
